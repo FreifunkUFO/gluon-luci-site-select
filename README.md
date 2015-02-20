@@ -8,11 +8,11 @@ Usage
 * copy your renamed site-files to files/lib/gluon/site-select
 * Edit the file "siteselect" in files/lib/gluon/site-select and add the entrys for your site-files. It should look like this:
 ```
-config sites 'ffhh'
+config site 'ffhh'
 	option path '/lib/gluon/site-select/ffhh.conf'
 	option sitename 'Freifunk Hamburg'
 
-config sites 'ffki'
+config site 'ffki'
         option path '/lib/gluon/site-select/ffki.conf'
         option sitename 'Freifunk Kiel'
 ```
