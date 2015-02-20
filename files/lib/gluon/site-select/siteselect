@@ -1,0 +1,3 @@
+config site 'ffki'
+        option path '/lib/gluon/site-select/ffki.conf'
+        option sitename 'Freifunk Kiel'
