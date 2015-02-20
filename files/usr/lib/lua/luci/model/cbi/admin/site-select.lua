@@ -38,7 +38,7 @@ function f.handle(self, state, data)
 	if state == FORM_VALID then
 
 		fs.copy(uci:get('siteselect', data.community , 'path'), '/lib/gluon/site.conf')
-
+		os.execute('sh "/lib/gluon/site-select/upgrade-script"')
 	end
 end
 
