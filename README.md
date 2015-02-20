@@ -16,3 +16,6 @@ config site 'ffki'
         option path '/lib/gluon/site-select/ffki.conf'
         option sitename 'Freifunk Kiel'
 ```
+<br>
+Das ganze sieht dann so aus: <br>
+![](http://labor19.net/Hendrik/preview1.png)
