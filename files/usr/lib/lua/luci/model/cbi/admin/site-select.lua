@@ -37,8 +37,27 @@ end
 function f.handle(self, state, data)
 	if state == FORM_VALID then
 
+		uci:set_confdir('/etc/config/')
+		local secret = uci:get('fastd', 'mesh_vpn', 'secret')
+
+		uci:set_confdir('/lib/gluon/site-select')
+		uci:set('siteselect', site.site_code, "secret", secret)
+		uci:save('siteselect')
+		uci:commit('siteselect')
+
 		fs.copy(uci:get('siteselect', data.community , 'path'), '/lib/gluon/site.conf')
 		os.execute('sh "/lib/gluon/site-select/upgrade-script"')
+
+		uci:set_confdir('/lib/gluon/site-select')
+		local secret2 = uci:get('siteselect', site.site_code, 'secret')
+		
+		uci:set_confdir('/etc/config/')
+		uci:set('fastd', 'mesh_vpn', "secret", secret2)
+
+		uci:save('fastd')
+		uci:commit('fastd')
+
+
 	end
 end
 
