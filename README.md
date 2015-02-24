@@ -5,8 +5,8 @@ This does not apply to the site.mk!
 Usage
 -----
 * Rename your site-files to site_code.conf (E.g. ffki.conf, ffhh.conf)
-* copy your renamed site-files to files/lib/gluon/site-select
-* Edit the file "siteselect" in files/lib/gluon/site-select and add the entrys for your site-files. It should look like this:
+* copy your renamed site-files to $gluondir/site/extra/
+* Add the file "siteselect" in $gluondir/site/ and add the entrys for your site-files. It should look like this:
 ```
 config site 'ffhh'
 	option path '/lib/gluon/site-select/ffhh.conf'

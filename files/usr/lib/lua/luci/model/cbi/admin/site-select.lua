@@ -42,6 +42,7 @@ function f.handle(self, state, data)
 		uci:delete('fastd', 'mesh_vpn', 'secret')
 
 		local secret = uci:get('siteselect', data.community, 'secret')
+		
 		if not secret or not secret:match(("%x"):rep(64)) then
 			uci:delete('siteselect', data.community, 'secret')
 		else
