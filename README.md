@@ -1,3 +1,5 @@
+Hinweis: Aktuell ist das makefile kaputt!
+=========================================
 # gluon-luci-site-select
 This Repository contains a Gluon package to choose between different site.conf files after flashing the image. <br>
 This does not apply to the site.mk!
